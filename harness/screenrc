@@ -1,0 +1,15 @@
+defscrollback 10000
+
+screen -t blog bash -c "./connect.sh blog 'cd /go/src/gopkg.in/noisesocket.v0/spiffe/client && /bin/bash'"
+screen -t database bash -c "./connect.sh database ' cd /go/src/gopkg.in/noisesocket.v0/spiffe/server && /bin/bash'"
+
+mousetrack on
+rendition so wb
+caption string "%n %t"
+
+split
+
+select 0
+focus down
+select 1
+focus up

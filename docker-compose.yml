@@ -1,0 +1,13 @@
+version: "2"
+services:
+   database:
+      build: database
+      hostname: database
+      tty: true
+      ports:
+       - "127.0.0.1:12888:12888"
+   blog:
+      build: blog
+      hostname: blog
+      tty: true
+
